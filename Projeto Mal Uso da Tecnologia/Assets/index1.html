@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Mau Uso da Tecnologia!</title>
+  <link rel="stylesheet" href="../css/Font.css">
+  <script src="../java/codigopagina.js" defer></script>
+</head>
+<body>
+<header><h1>O Mau Uso da Tecnologia!</h1></header>
+  <div class="window">
+    <div class="title-bar">O Mau Uso da Tecnologia — Página 1</div>
+    <div class="content text-center nav-content">
+      <p><button class="moldura" onclick="irParaProximaPagina()">Próxima Página</button></p>
+      <a href="index6.html" class="moldura">Login</a>
+    </div>
+  </div>
+
+  <div class="window">
+    <div class="title-bar">O QUE VAMOS FALAR NESSE SITE?</div>
+    <div class="content">
+
+      <p id="texto">Eu e meu amigo seremos grandes imoresarios.</p>
+      <button onclick="speechSynthesis.speak(new SpeechSynthesisUtterance(texto.innerText))">
+        🔊 Ouvir
+      </button>
+
+      <p>
+        Vamos acompanhar como o uso descontrolado das ferramentas digitais afeta 
+        a nossa saúde mental, comportamento e convivência em sociedade.
+      </p>
+
+      <h1>Impacto Digital (Comportamento)</h1>
+
+      <div class="video-wrapper">
+        <video src="../media/celular.mp4" controls></video>
+        <p class="subtitulo">Vídeo por <strong>Universo Programado</strong></p>
+      </div>
+
+      <p>
+        Como vemos no vídeo, os excessos na rotina conectada geram
+      </p>
+
+      <p>
+        E é exatamente isso que as grandes plataformas exploram. Cada aplicativo é projetado para capturar a sua
+        atenção pelo maior tempo possível, criando o fenômeno da <strong>hiperconexão</strong>. Individualmente, qualquer
+        pessoa pode usar as redes de forma saudável por um dia. Mas a indústria opera 24 horas por dia, com bilhões de usuários
+        simultâneos. No longo prazo, a busca contínua por dopamina garante que a tecnologia consuma o tempo das pessoas, sem exceção.
+      </p>
+      <video src="../media/DependenciaDigital.mp4" controls></video>
+    </div>
+  </div>
+
+    <footer>
+        Trabalho de Inovação Tecnológica - Davi William S. P. e José Luis S. G
+    </footer>
+
+</body>
+</html>
