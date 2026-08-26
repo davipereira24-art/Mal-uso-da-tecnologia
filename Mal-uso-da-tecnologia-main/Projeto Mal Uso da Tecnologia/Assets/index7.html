@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - O Mau Uso da Tecnologia!</title>
+  <link rel="stylesheet" href="../css/Font.css">
+  <script src="../java/codigopagina.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Sua Opinião é Importante!</h1>
+  </header>
+
+  <div class="window">
+    <div class="title-bar">O Mau Uso da Tecnologia — Página 7 (Feedback)</div>
+    <div class="content text-center nav-content">
+      <a href="index6.html" class="moldura">Página anterior</a>
+      <a href="index1.html" class="moldura">Home</a>
+    </div>
+  </div>
+
+  <div class="window">
+    <div class="title-bar">AVALIAÇÃO E FEEDBACK DO SITE</div>
+    <div class="content">
+
+      <p id="texto-feedback">Queremos saber o que você achou do nosso trabalho sobre o mau uso da tecnologia. Deixe suas críticas, sugestões ou depoimentos sobre como você gerencia seu tempo diante das telas.</p>
+
+      <!-- Botão no mesmo padrão da Página 5 -->
+      <button onclick="speechSynthesis.speak(new SpeechSynthesisUtterance(document.getElementById('texto-feedback').innerText))">
+        🔊 Ouvir
+      </button>
+
+      <h3>Envie seu Feedback</h3>
+      <form onsubmit="alert('Obrigado pelo seu feedback! Sua opinião nos ajuda a melhorar.'); return false;">
+        <label for="nome">Nome Completo:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required style="width: 100%; margin-bottom: 12px; padding: 6px;"><br>
+
+        <label for="email">E-mail de Contato:</label><br>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required style="width: 100%; margin-bottom: 12px; padding: 6px;"><br>
+
+        <label for="avaliacao">Como você avalia o conteúdo do nosso site?</label><br>
+        <select id="avaliacao" name="avaliacao" style="width: 100%; margin-bottom: 12px; padding: 6px;">
+          <option value="excelente">Excelente - Aprendi bastante</option>
+          <option value="bom">Bom - Tópicos interessantes</option>
+          <option value="regular">Regular - Pode melhorar</option>
+          <option value="ruim">Ruim - Pouco informativo</option>
+        </select><br>
+
+        <label for="tempo_tela">Em média, quantas horas por dia você passa no celular?</label><br>
+        <select id="tempo_tela" name="tempo_tela" style="width: 100%; margin-bottom: 12px; padding: 6px;">
+          <option value="1-2">1 a 2 horas</option>
+          <option value="3-5">3 a 5 horas</option>
+          <option value="5-8">5 a 8 horas</option>
+          <option value="8+">Mais de 8 horas</option>
+        </select><br>
+
+        <label for="comentario">Mensagem / Sugestões:</label><br>
+        <textarea id="comentario" name="comentario" rows="5" placeholder="Escreva aqui seu comentário ou sugestão..." required style="width: 100%; margin-bottom: 12px; padding: 6px;"></textarea><br>
+
+        <button type="submit" class="moldura" style="cursor: pointer; padding: 8px 16px;">Enviar Feedback</button>
+      </form>
+
+    </div>
+  </div>
+
+  <footer>
+    Trabalho de Inovação Tecnológica - Davi William S. P. e José Luis S. G
+  </footer>
+</body>
+</html>
