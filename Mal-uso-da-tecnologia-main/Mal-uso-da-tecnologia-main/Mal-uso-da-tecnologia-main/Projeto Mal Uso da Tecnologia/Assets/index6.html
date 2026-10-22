@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós - O Mau Uso da Tecnologia!</title>
+  <link rel="stylesheet" href="../css/Font.css">
+  <script src="../java/codigopagina.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Sobre Nós</h1>
+  </header>
+
+  <div class="window">
+    <div class="title-bar">O Mau Uso da Tecnologia — Página 6 (Sobre Nós)</div>
+    <div class="content text-center nav-content">
+      <a href="index5.html" class="moldura">Página anterior</a>
+      <a href="index7.html" class="moldura">Página de Feedback</a>
+    </div>
+  </div>
+
+  <div class="window">
+    <div class="title-bar">CONHEÇA OS CRIADORES DO PROJETO</div>
+    <div class="content">
+
+      <p id="texto-sobrenos">Somos Davi William S. P. e José Luis S. G., estudantes e idealizadores deste projeto de Inovação Tecnológica. Nosso objetivo com este site é conscientizar a comunidade escolar e a sociedade sobre o impacto da hiperconexão e o mau uso das ferramentas digitais no dia a dia.</p>
+
+      <!-- Botão no mesmo padrão da Página 5 -->
+      <button onclick="speechSynthesis.speak(new SpeechSynthesisUtterance(document.getElementById('texto-sobrenos').innerText))">
+        🔊 Ouvir
+      </button>
+
+      <h3>Nossa Missão e Visão</h3>
+
+      <div class="section">
+        <h4>🎯 Nossa Missão</h4>
+        <p>Promover a conscientização e a educação digital, alertando sobre os perigos da dependência tecnológica, do vício em telas e das estratégias persuasivas utilizadas pelas grandes plataformas.</p>
+      </div>
+
+      <div class="section">
+        <h4>👁️ Nossa Visão</h4>
+        <p>Acreditamos que a tecnologia deve ser uma ferramenta para impulsionar o conhecimento e a evolução humana, sem comprometer a saúde mental, o foco e as relações interpessoais presenciais.</p>
+      </div>
+
+      <div class="section">
+        <h4>👥 Integrantes do Grupo</h4>
+        <ul>
+          <li><strong>Davi William S. P.</strong> — Pesquisa de Conteúdo, Estruturação do Código e Design.</li>
+          <li><strong>José Luis S. G.</strong> — Desenvolvimento Front-end, Testes e Multimídia.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h4>📚 Projeto Escolar</h4>
+        <p>Este site foi desenvolvido como parte integrante da disciplina de <strong>Inovação Tecnológica</strong>, unindo programação web (HTML5, CSS3, JavaScript) com temas de relevância social.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Painel/Barra de Ferramentas de Acessibilidade -->
+<nav aria-label="Acessibilidade" class="accessibility-bar">
+  <button id="btn-accessibility" aria-expanded="false" aria-controls="accessibility-menu" class="acc-toggle-btn">
+    ♿ Opções de Acessibilidade
+  </button>
+  
+  <div id="accessibility-menu" class="accessibility-menu" hidden>
+    <h2>Acessibilidade</h2>
+    
+    <!-- Para Baixa Visão / Dislexia -->
+    <div class="acc-group">
+      <h3>Visual e Leitura</h3>
+      <button onclick="alterarFonte(1)" aria-label="Aumentar tamanho do texto">A+ Aumentar Fonte</button>
+      <button onclick="alterarFonte(-1)" aria-label="Diminuir tamanho do texto">A- Diminuir Fonte</button>
+      <button onclick="toggleFonteDislexia()" id="btn-dislexia">Fonte para Dislexia (OpenDyslexic)</button>
+      <button onclick="toggleEspacamento()" id="btn-espacamento">Aumentar Espaçamento de Texto</button>
+      <button onclick="toggleAltoContraste()" id="btn-contraste">Alto Contraste</button>
+      <button onclick="toggleModoNoturno()">Modo Escuro / Modo Limpo</button>
+    </div>
+
+    <!-- Para Autismo / Sobrecarga Sensorial -->
+    <div class="acc-group">
+      <h3>Modo Amigável para Autismo / TDAH</h3>
+      <button onclick="toggleModoFoco()" id="btn-foco">Modo Leitura / Foco (Reduz Estímulos)</button>
+      <button onclick="pausarAnimacoesEAudio()">Pausar Sons e Vídeos Autoplay</button>
+    </div>
+
+    <!-- Para Surdez / Deficiência Auditiva -->
+    <div class="acc-group">
+      <h3>Acessibilidade em Libras e Legendas</h3>
+      <p><small>Vídeos e áudios possuem transcrição/legendas abaixo do conteúdo.</small></p>
+    </div>
+  </div>
+</nav>
+
+<!-- Widget do VLibras (Tradutor de Libras Automático para Surdos) -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+  <footer>
+    Trabalho de Inovação Tecnológica - Davi William S. P. e José Luis S. G
+  </footer>
+</body>
+</html>

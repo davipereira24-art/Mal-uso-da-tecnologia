@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Mau Uso da Tecnologia!</title>
+  <link rel="stylesheet" href="../css/Font.css">
+  <script src="../java/codigopagina.js" defer></script>
+</head>
+<body>
+<header><h1>O Mau Uso da Tecnologia!</h1></header>
+  <div class="window">
+    <div class="title-bar">O Mau Uso da Tecnologia — Página 1</div>
+    <div class="content text-center nav-content">
+      <p><button class="moldura" onclick="irParaProximaPagina()">Próxima Página</button></p>
+      <a href="index8.html" class="moldura">Login</a>
+    </div>
+  </div>
+
+  <div class="window">
+    <div class="title-bar">O QUE VAMOS FALAR NESSE SITE?</div>
+    <div class="content">
+
+      <button onclick="speechSynthesis.speak(new SpeechSynthesisUtterance(' Vamos acompanhar como o uso descontrolado das ferramentas digitais afeta a nossa saúde mental, comportamento e convivência em sociedade.'))">
+  🔊 Ouvir
+</button>
+
+      <p>
+        Vamos acompanhar como o uso descontrolado das ferramentas digitais afeta 
+        a nossa saúde mental, comportamento e convivência em sociedade.
+      </p>
+
+      <h1>Impacto Digital (Comportamento)</h1>
+
+      <div class="video-wrapper">
+        <video src="../media/celular.mp4" controls></video>
+        <p class="subtitulo">Vídeo por <strong>Universo Programado</strong></p>
+      </div>
+
+      <p>
+        Como vemos no vídeo, os excessos na rotina conectada geram
+      </p>
+
+      <p>
+        E é exatamente isso que as grandes plataformas exploram. Cada aplicativo é projetado para capturar a sua
+        atenção pelo maior tempo possível, criando o fenômeno da <strong>hiperconexão</strong>. Individualmente, qualquer
+        pessoa pode usar as redes de forma saudável por um dia. Mas a indústria opera 24 horas por dia, com bilhões de usuários
+        simultâneos. No longo prazo, a busca contínua por dopamina garante que a tecnologia consuma o tempo das pessoas, sem exceção.
+      </p>
+      <video src="../media/DependenciaDigital.mp4" controls></video>
+    </div>
+  </div>
+
+
+
+  <!-- Painel/Barra de Ferramentas de Acessibilidade -->
+<nav aria-label="Acessibilidade" class="accessibility-bar">
+  <button id="btn-accessibility" aria-expanded="false" aria-controls="accessibility-menu" class="acc-toggle-btn">
+    ♿ Opções de Acessibilidade
+  </button>
+  
+  <div id="accessibility-menu" class="accessibility-menu" hidden>
+    <h2>Acessibilidade</h2>
+    
+    <!-- Para Baixa Visão / Dislexia -->
+    <div class="acc-group">
+      <h3>Visual e Leitura</h3>
+      <button onclick="alterarFonte(1)" aria-label="Aumentar tamanho do texto">A+ Aumentar Fonte</button>
+      <button onclick="alterarFonte(-1)" aria-label="Diminuir tamanho do texto">A- Diminuir Fonte</button>
+      <button onclick="toggleFonteDislexia()" id="btn-dislexia">Fonte para Dislexia (OpenDyslexic)</button>
+      <button onclick="toggleEspacamento()" id="btn-espacamento">Aumentar Espaçamento de Texto</button>
+      <button onclick="toggleAltoContraste()" id="btn-contraste">Alto Contraste</button>
+      <button onclick="toggleModoNoturno()">Modo Escuro / Modo Limpo</button>
+    </div>
+
+    <!-- Para Autismo / Sobrecarga Sensorial -->
+    <div class="acc-group">
+      <h3>Modo Amigável para Autismo / TDAH</h3>
+      <button onclick="toggleModoFoco()" id="btn-foco">Modo Leitura / Foco (Reduz Estímulos)</button>
+      <button onclick="pausarAnimacoesEAudio()">Pausar Sons e Vídeos Autoplay</button>
+    </div>
+
+    <!-- Para Surdez / Deficiência Auditiva -->
+    <div class="acc-group">
+      <h3>Acessibilidade em Libras e Legendas</h3>
+      <p><small>Vídeos e áudios possuem transcrição/legendas abaixo do conteúdo.</small></p>
+    </div>
+  </div>
+</nav>
+
+<!-- Widget do VLibras (Tradutor de Libras Automático para Surdos) -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+    <footer>
+        Trabalho de Inovação Tecnológica - Davi William S. P. e José Luis S. G
+    </footer>
+
+</body>
+</html>

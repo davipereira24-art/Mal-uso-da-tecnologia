@@ -1,0 +1,102 @@
+/* --- Melhorias de Foco para Deficientes Físicos e Navegação por Teclado --- */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 3px solid #005A9C !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 5px #005A9C;
+}
+
+/* --- Fonte para Dislexia (OpenDyslexic ou fonte Sem Serifa de alta legibilidade) --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body.fonte-dislexia {
+  font-family: 'Open Sans', Verdana, Arial, sans-serif !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+  line-height: 1.8 !important;
+}
+
+body.espacamento-ampliado {
+  line-height: 2 !important;
+  letter-spacing: 0.15em !important;
+  word-spacing: 0.2em !important;
+}
+
+/* --- Alto Contraste (Baixa Visão) --- */
+body.alto-contraste {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+body.alto-contraste .window,
+body.alto-contraste header,
+body.alto-contraste footer {
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #FFFF00 !important;
+}
+
+body.alto-contraste a, 
+body.alto-contraste button {
+  background-color: #FFFF00 !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+  border: 2px solid #FFFFFF !important;
+}
+
+/* --- Modo Foco / Amigável para Autismo (Sem poluição visual ou cores gritantes) --- */
+body.modo-foco {
+  background-color: #F0F4F8 !important;
+  color: #1A202C !important;
+}
+
+body.modo-foco .window {
+  box-shadow: none !important;
+  border: 1px solid #CBD5E0 !important;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+body.modo-foco img,
+body.modo-foco video {
+  filter: grayscale(20%);
+}
+
+/* --- Painel de Acessibilidade CSS --- */
+.accessibility-bar {
+  background: #1A202C;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.acc-toggle-btn {
+  background: #005A9C;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.accessibility-menu {
+  background: #FFFFFF;
+  color: #000000;
+  padding: 15px;
+  border: 2px solid #005A9C;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.acc-group {
+  margin-bottom: 15px;
+}
+
+.acc-group button {
+  margin: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
