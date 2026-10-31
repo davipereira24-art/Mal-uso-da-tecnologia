@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação - O mau uso da tecnologia</title>
+    <link rel="stylesheet" href="../css/Font.css">
+</head>
+  
+<body>
+    <div class="auth-container">
+        <div class="window login-box">
+            <div class="title-bar">Autenticação do Sistema</div>
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="login">
+                    🔐 Login
+                </button>
+                <button class="tab-button" data-tab="cadastro">
+                    📝 Cadastro
+                </button>
+            </div>
+
+            <div id="login" class="tab-content active">
+                <div class="content">
+                    <p style="text-align: center; color: #888; margin-bottom: 25px;">
+                        Faça login para acessar o conteúdo completo
+                    </p>
+                    <form action="index1.html" method="POST" class="login-form" id="formLogin">
+                        <div class="field">
+                            <label for="user-login">Usuário:</label>
+                            <input type="text" id="user-login" name="user" required>
+                        </div>
+                        <div class="field">
+                            <label for="pass-login">Senha:</label>
+                            <input type="password" id="pass-login" name="pass" required>
+                        </div>
+                        <button type="submit" class="moldura" style="width: 100%;">
+                            Entrar no Sistema
+                        </button>
+                    </form>
+                    <p style="text-align: center; color: #666; margin-top: 20px; font-size: 0.9rem;">
+                        Não tem conta? <a href="#" class="toggle-tab" data-tab="cadastro" style="color: var(--accent);">Cadastre-se aqui</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="cadastro" class="tab-content">
+                <div class="content">
+                    <p style="text-align: center; color: #888; margin-bottom: 25px;">
+                        Crie sua conta para começar
+                    </p>
+                    <form action="processar_cadastro.php" method="POST" class="login-form" id="formCadastro">
+                        <div class="field">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="usuario">Usuário:</label>
+                            <input type="text" id="usuario" name="usuario" required minlength="4">
+                        </div>
+                        <div class="field">
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha" required minlength="6">
+                        </div>
+                        <div class="field">
+                            <label for="confirma-senha">Confirmar Senha:</label>
+                            <input type="password" id="confirma-senha" name="confirma_senha" required minlength="6">
+                        </div>
+                        <div class="field" style="flex-direction: row; gap: 10px;">
+                            <input type="checkbox" id="termos" name="termos" required style="width: auto;">
+                            <label for="termos" style="margin: 0;">
+                                Concordo com os <a href="#" style="color: var(--accent);">Termos de Uso</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="moldura" style="width: 100%;">
+                            Criar Minha Conta
+                        </button>
+                    </form>
+                    <p style="text-align: center; color: #666; margin-top: 20px; font-size: 0.9rem;">
+                        Já tem conta? <a href="#" class="toggle-tab" data-tab="login" style="color: var(--accent);">Faça login aqui</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../java/auth.js" defer></script>
+    <audio controls src="../media/voce-nao-tem-aura.mp3"></audio>
+        <footer>
+        Trabalho de Inovação Tecnológica - Davi William S. P. e José Luis S. G
+    </footer>
+
+</body>
+
+</html>

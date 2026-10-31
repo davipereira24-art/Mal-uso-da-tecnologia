@@ -1,0 +1,298 @@
+/* --- VARIÁVEIS DE CORES E ESTILO (DO CSS 2) --- */
+:root {
+    --primary: #00bcd4; /* Ciano Principal */
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #e0e0e0;
+    --accent: #ffc107; /* Amarelo para destaque */
+    --window-bg: rgba(30, 30, 30, 0.9); /* Adaptado para o fundo escuro */
+}
+
+/* --- CONFIGURAÇÃO DE FONTE (DO CSS 1) --- */
+@font-face {
+    font-family: 'FingerPaint';
+    src: url('../Fonts/finger-paint/FingerPaint-Regular.ttf') format('truetype');
+}
+
+/* --- ESTILOS GLOBAIS (FUSÃO DE FUNDO DO CSS 2 COM ESTRUTURA DO CSS 1) --- */
+body {
+    font-family: 'FingerPaint', sans-serif;
+    background: radial-gradient(circle at top, #00363a 0%, #121212 100%);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- CABEÇALHO DO CSS 2 --- */
+header {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 30px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 188, 212, 0.5);
+}
+
+/* --- ESTRUTURA DE JANELA (UI DO CSS 1 ADAPTADA) --- */
+.window {
+    background: var(--window-bg);
+    border: 1px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px auto 20px auto; /* Reduzimos a margem superior para 5px */
+    max-width: 1000px;
+    width: 90%;
+}
+.title-bar {
+    background: linear-gradient(to right, #00838f, #00bcd4); /* Alterado tom de verde para azul ciano */
+    color: #fff;
+    padding: 15px 10px;
+    font-weight: bold;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    border-bottom: 1px solid var(--primary);
+}
+
+.content {
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 0 0 12px 12px;
+}
+
+/* --- NAVEGAÇÃO --- */
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: var(--primary);
+    color: #121212;
+}
+
+/* --- MÍDIA E TABELAS --- */
+video, img {
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    max-width: 100%;
+}
+
+video { margin: 15px 0; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary);
+    color: #121212;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+td {
+    background-color: #252525;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+/* --- TIPOGRAFIA E LINKS --- */
+a, h1, h2, h3, .titlepage { color: var(--primary); }
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover { text-decoration: underline; color: var(--accent); }
+
+h1, h2, h3 { margin-top: 20px; }
+
+h3 {
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+}
+
+.titlepage {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p { line-height: 1.8; font-size: 1.1rem; color: #bbb; }
+li { margin-bottom: 10px; color: var(--accent); }
+
+/* --- SEÇÃO HERO --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 0;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* --- BOTÕES E FORMULÁRIOS --- */
+.moldura, button {
+    padding: 12px 24px;
+    font-weight: bold;
+    border: transparent; 
+    border-radius: 8px; 
+    background: var(--primary);
+    color: #121212;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'FingerPaint', sans-serif;
+    transition: all 0.3s;
+}
+
+.moldura:hover, button:hover {
+    transform: scale(1.05);
+    background: #26c6da;
+}
+
+.login-box {
+    max-width: 350px;
+    width: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field label {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background: #121212;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    margin: 5px 0 10px;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA AUTENTICAÇÃO --- */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid #333;
+}
+
+.tab-button {
+    padding: 15px 30px;
+    background: #1a1a1a;
+    color: var(--accent);
+    border: none;
+    cursor: pointer;
+    font-family: 'FingerPaint', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+    background: #252525;
+}
+
+.tab-button.active {
+    background: var(--primary);
+    color: #121212;
+    border-bottom: 3px solid var(--accent);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.login-box {
+    max-width: 450px;
+    width: 100%;
+}
+}
